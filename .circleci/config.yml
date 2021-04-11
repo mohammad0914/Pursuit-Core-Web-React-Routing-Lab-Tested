@@ -5,6 +5,12 @@ workflows:
   build:
     jobs:
       - cypress/run:
+          spec:
+            - "cypress/integration/CatRandom.test.js"
+            - "cypress/integration/CatRandomNum.test.js"
+            - "cypress/integration/DogBreed.test.js"
+            - "cypress/integration/DogRandom.test.js"
+            - "cypress/integration/DogRandomNum.test.js"
           start: npm start
           post-steps:
             - store_test_results:
