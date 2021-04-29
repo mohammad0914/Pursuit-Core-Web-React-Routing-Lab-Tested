@@ -5,7 +5,7 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          spec: cypress/integration/lab
+          spec: cypress/integration/lab/*
           start: npm start
           post-steps:
             - store_test_results:
