@@ -10,17 +10,18 @@ Today, we are creating a full-fledged app to fulfill all of your pet-image-searc
 <details>
   <summary>Tips: Using the APIs</summary>
 
-  **Cat API**
-  
-  - You may see some instructions in the docs about getting an API key. You don't need it to do this lab. You can ignore that.
-  - [Check the Quickstart](https://docs.thecatapi.com/) to find the URL to use to load one random cat image.
-  - [The documentation here](https://docs.thecatapi.com/pagination) says to add `?limit=3` to the URL to show 3 random images.
-  
-  **Dog API**
-  - [The documentation here](https://dog.ceo/dog-api/documentation/random) shows you how to request a random dog picture _or_ a specific number of random dog images.
-  - [Scroll down this page](https://dog.ceo/dog-api/documentation/breed) to see how to request a random image of a specific dog breed.
-  - Notice that the Dog API responses have a different structure than the Cat API responses!
-  
+**Cat API**
+
+- You may see some instructions in the docs about getting an API key. You don't need it to do this lab. You can ignore that.
+- [Check the Quickstart](https://docs.thecatapi.com/) to find the URL to use to load one random cat image.
+- [The documentation here](https://docs.thecatapi.com/pagination) says to add `?limit=3` to the URL to show 3 random images.
+
+**Dog API**
+
+- [The documentation here](https://dog.ceo/dog-api/documentation/random) shows you how to request a random dog picture _or_ a specific number of random dog images.
+- [Scroll down this page](https://dog.ceo/dog-api/documentation/breed) to see how to request a random image of a specific dog breed.
+- Notice that the Dog API responses have a different structure than the Cat API responses!
+
 </details>
 
 This app will have _routes_.
@@ -56,6 +57,8 @@ These apps (components) will be:
 ## Bonus
 
 - **Random amounts of both cats and dogs** `/all/random`. Load a random number between 1 and 10 for both cats AND dogs (e.g 4 cats and 7 dogs), and uses one API call for each of the two APIs to load that many images.
+
+![Routing lab demo](./routing-lab-demo.gif)
 
 ## Submission Guidelines
 
