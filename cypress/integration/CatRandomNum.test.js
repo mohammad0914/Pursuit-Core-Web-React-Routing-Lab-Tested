@@ -11,7 +11,7 @@ describe("/cat/random/:num", () => {
       cats.map((url) => ({ url }))
     ).as("fetch");
 
-    cy.visit("http://localhost:3001/cat/random/3");
+    cy.visit("http://localhost:3000/cat/random/3");
     cy.wait("@fetch");
 
     cy.get("img")

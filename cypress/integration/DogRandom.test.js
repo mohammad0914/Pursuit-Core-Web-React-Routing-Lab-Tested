@@ -14,7 +14,7 @@ describe("/dog/random", () => {
       responses += 1;
     }).as("fetch");
 
-    cy.visit("http://localhost:3001/dog/random");
+    cy.visit("http://localhost:3000/dog/random");
     cy.wait("@fetch");
 
     cy.get("img").should("have.attr", "src", dogs[0]);

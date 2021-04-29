@@ -11,7 +11,7 @@ describe("/dog/random/:num", () => {
       status: "success",
     }).as("fetch");
 
-    cy.visit("http://localhost:3001/dog/random/3");
+    cy.visit("http://localhost:3000/dog/random/3");
     cy.wait("@fetch");
 
     cy.get("img")

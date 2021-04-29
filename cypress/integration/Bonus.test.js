@@ -27,7 +27,7 @@ describe("/all/random", () => {
       status: "success",
     }).as("dogs");
 
-    cy.visit("http://localhost:3001/all/random");
+    cy.visit("http://localhost:3000/all/random");
     cy.wait("@cats");
     cy.wait("@dogs");
 

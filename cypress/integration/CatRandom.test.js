@@ -1,6 +1,6 @@
 const cats = [
   "https://cdn2.thecatapi.com/images/NuwK_UY9u.jpg",
-  "https://cdn2.thecatapi.com/images/anp.jpg"
+  "https://cdn2.thecatapi.com/images/anp.jpg",
 ];
 
 describe("/cat/random", () => {
@@ -15,7 +15,7 @@ describe("/cat/random", () => {
       responses += 1;
     }).as("fetch");
 
-    cy.visit("http://localhost:3001/cat/random");
+    cy.visit("http://localhost:3000/cat/random");
     cy.wait("@fetch");
 
     cy.get("img").should("have.attr", "src", cats[0]);
