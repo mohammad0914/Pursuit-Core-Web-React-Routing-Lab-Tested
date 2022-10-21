@@ -6,19 +6,22 @@ export default class DogRandomWithId extends React.Component {
     constructor(){
         super()
         this.state={
-            url:''
+            images:[]
         }
     }
+    
 componentDidMount(){
     this.getImage()
 }
 getImage=()=>{
+    const  {id}=this.props.match.params
+
     axios
-    .get("https://dog.ceo/api/breeds/image/random/3")
+    .get(`https://dog.ceo/api/breeds/image/random/+${id}`)
     .then(response => {
         console.log(response.data.message)
         this.setState({
-            url:response.data.message
+            images:response.data.message
         })
     })
     .catch(err => {
@@ -30,10 +33,11 @@ getImage=()=>{
 
     render(){
         return (
-            <div>
-                <h>DogRandomWithId</h>
-            <img src={this.state.url}></img>
-            </div>
+            
+         this.state.images.map((image)=>{
+        return <img src={image} key={image}/>
+          })
+          
         )
     }
 }
